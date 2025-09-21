@@ -8,9 +8,26 @@ Did some minor changes to the keymap as suitable to my workflow.
 
 ### [Layout](config/adv360.keymap)
 
-| ![image](assets/layout.png) |
+| ![image](assets/base_layer.png) |
 |:--:|
 | *** Colemak-DH ANSI standard layout *** |
+
+
+
+### [Layout](config/adv360.keymap)
+
+| ![image](assets/fn_layer.png) |
+|:--:|
+| *** FN layer modifications *** |
+
+
+
+### [Layout](config/adv360.keymap)
+
+| ![image](assets/mod_layer.png) |
+|:--:|
+| *** Mod layer modifications *** |
+
 
 
 ## Modifying the keymap
