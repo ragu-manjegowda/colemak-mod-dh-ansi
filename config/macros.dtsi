@@ -216,6 +216,20 @@
     display-name = "Mac Strikethrough Text";
   };
 
+  Terminal_Copy: Terminal_Copy {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LC(LS(C))>;
+    display-name = "Terminal Copy";
+  };
+
+  Terminal_Paste: Terminal_Paste {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LC(LS(P))>;
+    display-name = "Terminal Paste";
+  };
+
   Double_Click: Double_Click {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
