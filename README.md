@@ -16,6 +16,14 @@ Did some minor changes to the keymap as suitable to my workflow.
 
 ### [Layout](config/adv360.keymap)
 
+| ![image](assets/kp_layer.png) |
+|:--:|
+| *** KP layer modifications *** |
+
+
+
+### [Layout](config/adv360.keymap)
+
 | ![image](assets/fn_layer.png) |
 |:--:|
 | *** FN layer modifications *** |
@@ -27,6 +35,14 @@ Did some minor changes to the keymap as suitable to my workflow.
 | ![image](assets/mod_layer.png) |
 |:--:|
 | *** Mod layer modifications *** |
+
+
+
+### [Layout](config/adv360.keymap)
+
+| ![image](assets/sym_layer.png) |
+|:--:|
+| *** Symbol layer modifications *** |
 
 
 
