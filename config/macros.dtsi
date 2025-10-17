@@ -291,3 +291,17 @@ Vim_Terminal_ESC: Vim_Terminal_ESC {
     bindings = <&kp LC(BACKSLASH) &kp LC(O)>;
     display-name = "VIM Terminal ESC";
 };
+
+Terminal_Vim_Mode: Terminal_Vim_Mode {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp LC(X) &kp LC(E)>;
+    display-name = "Terminal Vim Mode";
+};
+
+Toggle_Mic: Toggle_Mic {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&kp F20>;
+    display-name = "Toggle Mic";
+};
