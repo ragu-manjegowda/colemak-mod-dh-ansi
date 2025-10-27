@@ -1,10 +1,9 @@
 # Kinesis Advantage 360 Pro ZMK Config
 
-## Ragu's fork of the Kinesis Advantage 360 Pro config repository
+## Ragu’s customized fork of the official Kinesis Advantage 360 Pro configuration repository.
 
-Modified the layout to Colemak-DH ANSI standard.
+The layout has been modified to follow the Colemak-DH ANSI standard, with several additional keymap adjustments tailored to fit personal workflow and preferences.
 
-Did some minor changes to the keymap as suitable to my workflow.
 
 ### [Layout](config/adv360.keymap)
 

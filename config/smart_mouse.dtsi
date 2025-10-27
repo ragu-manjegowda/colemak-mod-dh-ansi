@@ -1,0 +1,92 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// Author: Ragu Manjegowda
+// GitHub: ragu-manjegowda
+// SPDX-License-Identifier: MIT
+//
+// Support for smart mouse
+// Switch between fast and slow movement when Control is held
+//
+///////////////////////////////////////////////////////////////////////////////
+
+
+#include <dt-bindings/zmk/pointing.h>
+
+#undef M_UP
+#undef M_DOWN
+#undef M_LEFT
+#undef M_RIGHT
+#undef M_UP_LEFT
+#undef M_UP_RIGHT
+#undef M_DOWN_LEFT
+#undef M_DOWN_RIGHT
+
+// github.com/zmkfirmware/zmk/blob/main/app/include/dt-bindings/zmk/pointing.h
+#define M_UP(vert)              (MOVE_Y(-vert))
+#define M_DOWN(vert)            (MOVE_Y( vert))
+#define M_LEFT(hor)             (MOVE_X( -hor))
+#define M_RIGHT(hor)            (MOVE_X(  hor))
+
+#define M_UP_LEFT(dist)         (MOVE( -dist, -dist))
+#define M_UP_RIGHT(dist)        (MOVE(  dist, -dist))
+#define M_DOWN_LEFT(dist)       (MOVE( -dist,  dist))
+#define M_DOWN_RIGHT(dist)      (MOVE(  dist,  dist))
+
+#define ZMK_POINTING_FAST_MOVE_VAL 2000
+
+// Custom fast mmv movement when Control is held
+mmv_up: mmv_up_mod {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&mmv MOVE_UP>, <&mmv M_UP(ZMK_POINTING_FAST_MOVE_VAL)>;
+    mods = <(MOD_LCTL | MOD_RCTL)>;
+};
+
+mmv_down: mmv_down_mod {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&mmv MOVE_DOWN>, <&mmv M_DOWN(ZMK_POINTING_FAST_MOVE_VAL)>;
+    mods = <(MOD_LCTL | MOD_RCTL)>;
+};
+
+mmv_left: mmv_left_mod {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&mmv MOVE_LEFT>, <&mmv M_LEFT(ZMK_POINTING_FAST_MOVE_VAL)>;
+    mods = <(MOD_LCTL | MOD_RCTL)>;
+};
+
+mmv_right: mmv_right_mod {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&mmv MOVE_RIGHT>, <&mmv M_RIGHT(ZMK_POINTING_FAST_MOVE_VAL)>;
+    mods = <(MOD_LCTL | MOD_RCTL)>;
+};
+
+mmv_up_left: mmv_up_left_mod {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&mmv M_UP_LEFT(ZMK_POINTING_DEFAULT_MOVE_VAL)>, <&mmv M_UP_LEFT(ZMK_POINTING_FAST_MOVE_VAL)>;
+    mods = <(MOD_LCTL | MOD_RCTL)>;
+};
+
+mmv_up_right: mmv_up_right_mod {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&mmv M_UP_RIGHT(ZMK_POINTING_DEFAULT_MOVE_VAL)>, <&mmv M_UP_RIGHT(ZMK_POINTING_FAST_MOVE_VAL)>;
+    mods = <(MOD_LCTL | MOD_RCTL)>;
+};
+
+mmv_down_left: mmv_down_left_mod {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&mmv M_DOWN_LEFT(ZMK_POINTING_DEFAULT_MOVE_VAL)>, <&mmv M_DOWN_LEFT(ZMK_POINTING_FAST_MOVE_VAL)>;
+    mods = <(MOD_LCTL | MOD_RCTL)>;
+};
+
+mmv_down_right: mmv_down_right_mod {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&mmv M_DOWN_RIGHT(ZMK_POINTING_DEFAULT_MOVE_VAL)>, <&mmv M_DOWN_RIGHT(ZMK_POINTING_FAST_MOVE_VAL)>;
+    mods = <(MOD_LCTL | MOD_RCTL)>;
+};
