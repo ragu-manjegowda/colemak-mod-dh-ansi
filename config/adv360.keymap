@@ -22,7 +22,7 @@
 
             combo_bt_clr {
                 bindings = <&bt BT_CLR>;
-                timeout-ms = <150>;
+                timeout-ms = <300>;
                 key-positions = <19 48>;
                 layers = <3>;
             };
